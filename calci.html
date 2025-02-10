@@ -1,0 +1,83 @@
+<!--  WATCH ==> 7.55 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <style>
+      body{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160vh;
+      }
+        #main{
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: black;
+          border-radius: 15px;
+          max-width: 500px;
+          overflow: hidden; /*==> see search bar*/
+        }
+        #display{
+          width: 100%;
+          padding: 20px;
+          font-size: 5rem;
+          text-align: left;
+          border: none;
+          background-color: rgb(54, 52, 52);
+          color: white;
+        }
+        #keys{
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          padding: 25px;    
+        }
+        button{
+          width: 100px;
+          height: 100px;
+          border-radius: 10px;
+          border: none;
+          color: white;
+          background-color: rgb(54, 52, 52);
+          font-size: 3rem;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+        button:hover{
+          background-color: rgba(128, 127, 127, 50%);
+        }
+        button:active{
+          background-color: rgba(162, 154, 154, 70%);
+        }
+    </style>
+</head>  
+<body>
+        <div id="main">
+            <input id="display"  readonly>
+            <div id="keys"> 
+              <button onclick="todisplay('+')">+</button>
+              <button onclick="todisplay('7')">7</button>
+              <button onclick="todisplay('8')">8</button>
+              <button onclick="todisplay('9')">9</button>
+              <button onclick="todisplay('-')">-</button>
+              <button onclick="todisplay('4')">4</button>
+              <button onclick="todisplay('5')">5</button>
+              <button onclick="todisplay('6')">6</button>
+              <button onclick="todisplay('*')">*</button>
+              <button onclick="todisplay('1')">1</button>
+              <button onclick="todisplay('2')">2</button>
+              <button onclick="todisplay('3')">3</button>
+              <button onclick="todisplay('/')">/</button>
+              <button onclick="todisplay('0')">0</button>
+              <button onclick="todisplay('.')">.</button>
+              <button onclick="calculate()">=</button>
+              <button onclick="cleardisplay()">C</button>
+            </div>
+        </div>
+
+<script src="calci.js"></script>
+</body>
+</html>
